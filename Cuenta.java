@@ -1,4 +1,4 @@
-package Cuenta;
+package cuenta_programacion2;
 public class Cuenta {
      String titular;
      double saldo;
@@ -7,11 +7,11 @@ public class Cuenta {
 
 
     
-    Cuenta(String titular, double saldoInicial, String tipoCuenta) {
-        this.titular = titular;
-        this.saldo = saldoInicial;
-        this.tipoCuenta = tipoCuenta;
-    }
+//    Cuenta(String titular, double saldoInicial, String tipoCuenta) {
+//        this.titular = titular;
+//        this.saldo = saldoInicial;
+//        this.tipoCuenta = tipoCuenta;
+//    }
 
     
     double consultarSaldo() {
@@ -34,18 +34,4 @@ public class Cuenta {
     }
 
 
-    public static void main(String[] args) {
-        
-        Cuenta cuentaPepe = new Cuenta("Pepe Pérez", 1000000, "Ahorros");
-        System.out.println("Saldo de Pepe: $" + cuentaPepe.consultarSaldo());
-
-
-        Cuenta cuentaLola = new Cuenta("Lola López", 500000, "Corriente");
-        boolean exito = cuentaLola.retirar(200000);
-        if (exito) {
-            System.out.println("Retiro exitoso. Saldo de Lola: $" + cuentaLola.consultarSaldo());
-        } else {
-            System.out.println("No se pudo realizar el retiro.");
-        }
-    }
 }
